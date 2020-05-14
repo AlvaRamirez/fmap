@@ -1,0 +1,164 @@
+[
+  {
+    "lat": -34.50747,
+    "lng": -58.48703,
+    "name": "Arnaldo",
+    "description": "No falla...",
+    "type": "Baratas",
+    "web":"http://arnaldo.com.ar/",
+    "img": "assets/img/heladerias/arnaldo.jpg"
+  },
+  {
+    "lat": -34.53258,
+    "lng": -58.49078,
+    "name": "Grido",
+    "description": "No falla...",
+    "type": "Baratas",
+    "web":"https://www.argentina.gridohelado.com/",
+    "img": "assets/img/heladerias/grido.jpg"
+    
+  },
+  {
+    "lat": -34.581198,
+    "lng": -58.426298,
+    "name": "Nicolo",
+    "description": "No falla...",
+    "type": "Baratas",
+    "web": "https://www.facebook.com/nicolohelados",
+    "img": "assets/img/heladerias/nicolo.jpg"
+  },
+  {
+    "lat": -34.632713,
+    "lng": -58.462814,
+    "name": "Palmeiras",
+    "description": "No falla...",
+    "type": "Baratas",
+    "web": "https://www.facebook.com/heladospalmeiras/",
+    "img": "assets/img/heladerias/palmeiras.jpg"
+  },
+  {
+    "lat": -34.603365,
+    "lng": -58.377753,
+    "name": "Vanshelado",
+    "description": "No falla...",
+    "type": "Baratas",
+    "web": "https://vanshelato.com.ar/",
+    "img": "assets/img/heladerias/vanshelado.jpg"
+  },
+  {
+    "lat": -34.802574,
+    "lng": -58.264084,
+    "name": "Rapa Nui",
+    "description": "Aboeee ¿cobraste?",
+    "type": "Chetas",
+    "web": "https://chocolatesrapanui.com.ar/",
+    "img": "assets/img/heladerias/rapa nui.jpg"
+  },
+  {
+    "lat": -34.60424,
+    "lng": -58.38772,
+    "name": "Freddo",
+    "description": "Aboeee ¿cobraste?",
+    "type": "Chetas",
+    "web": "https://freddo.com.ar/",
+    "img": "assets/img/heladerias/freddo.jpg"
+  },
+  {
+    "lat": -34.589421,
+    "lng": -58.429012,
+    "name": "Luccianos",
+    "description": "Aboeee ¿cobraste?",
+    "type": "Chetas",
+    "web": "http://luccianos.com.ar/",
+    "img": "assets/img/heladerias/luccianos.jpg"
+  },
+
+  {
+    "lat": -34.61315,
+    "lng": -58.37723,
+    "name": "Volta",
+    "description": "Aboeee ¿cobraste?",
+    "type": "Chetas",
+    "web": "https://www.unaltravolta.com/",
+    "img": "assets/img/heladerias/volta.jpg"
+  },
+  {
+    "lat": -34.594082,
+    "lng": -58.392029,
+    "name": "Valence",
+    "description": "Tiene opciones veganas evidentemente",
+    "type": "Vegana",
+    "web":"https://www.valence.com.ar/",
+    "img": "assets/img/heladerias/valence.jpg"
+  },
+
+  {
+    "lat": -34.577335,
+    "lng": -58.430626,
+    "name": "Veganius",
+    "description": "Tiene opciones veganas evidentemente",
+    "type": "Vegana",
+    "web":"http://veganius.com/",
+    "img": "assets/img/heladerias/veganius.jpg"
+  },
+  {
+    "lat": -34.583216,
+    "lng": -58.430626,
+    "name": "Chungo",
+    "description": "Tiene opciones veganas evidentemente",
+    "type": "Vegana",
+    "web":"http://www.chungo.com.ar/chungo/",
+    "img": "assets/img/heladerias/chungo.jpg"
+  },
+  {
+    "lat": -34.595098,
+    "lng": -58.404187,
+    "name": "Helados Daniel",
+    "description": "Mal ahi, por suerte aca tenes opciones sin Tacc",
+    "type": "Sin Tacc",
+    "web":"https://heladosdaniel.com/",
+    "img": "assets/img/heladerias/daniel.jpg"
+  },
+  {
+    "lat": -34.525711,
+    "lng": -58.483001,
+    "name": "Cremolatti",
+    "description": "Mal ahi, por suerte aca tenes opciones sin Tacc",
+    "type": "Sin Tacc",
+    "web":"https://cremolatti.com.ar/web/",
+    "img": "assets/img/heladerias/cremolatti.jpg"
+  },
+  {
+    "lat": -34.479322,
+    "lng": -58.554215,
+    "name": "Munchis",
+    "description":"Mal ahi, por suerte aca tenes opciones sin Tacc",
+    "type": "Sin Tacc",
+    "web": "https://www.munchis.com.ar/",
+    "img": "assets/img/heladerias/munchis.jpg"
+  },
+
+  {
+    "lat": -34.589508,
+    "lng": -58.429152,
+    "name": "Persicco",
+    "description": "Mal ahi, por suerte aca tenes opciones sin Tacc",
+    "type": "Sin Tacc",
+    "web": "https://persicco.wpengine.com/",
+    "img": "assets/img/heladerias/persicco.jpg"
+  },
+
+  {
+    "lat": -34.547766,
+    "lng": -58.552059,
+    "name": "Guapaletas",
+    "description": "Mal ahi, por suerte aca tenes opciones sin Tacc",
+    "type": "Sin Tacc",
+    "web": "https://guapaletas.com/home/",
+    "img": "assets/img/heladerias/guapaletas.jpg"
+  }
+]
+
+
+
+
