@@ -39,13 +39,6 @@ p{
 
 }
 
-@keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-  }
-  
 
 .input {
     border-radius: 10px;
@@ -313,15 +306,26 @@ h3 {
     color: gray !important;
   }
   
-.titu{font-size: 20px; color: black;text-decoration: none;font-style: normal;text-transform: none;font-weight: 700;}
+  .titu {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    text-transform: none;
+    font-family: 'Raleway', sans-serif !important;
+}
 
-.btn{padding: 5px 15px;
+.btn {
+    padding: 10px 20px;
     margin: 5px;
-    border-radius: 5px;;
+    border-radius: 5px;
     color: #fff;
     font-family: 'Raleway', sans-serif !important;
     text-transform: uppercase;
     text-decoration: none;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
 }
 
 #form_wrapper{background-color: black;
@@ -337,12 +341,17 @@ box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
 
 }
 
+.botd{padding: 15px;}
+
+.botd:hover{
+    opacity: .7;
+}
+
 #btn_agregar_wrapper{margin-top: 40px;}
 
 
-.verde{background-color: green;}
 .azul{ background-color: #525252;}
-.rojo{background-color: red;}
+
 
 button{
     transition: 0.3s all;
@@ -367,4 +376,50 @@ a:hover{
 #wrapper{padding: 50px 0 40px;}
 #btn_agregar_wrapper{display: flex; justify-content: flex-end; margin-bottom: 40px;}
 .inner{max-width: 1200px; margin: auto;}
-#listado .item{display: flex; justify-content: space-between;align-items: center;border-bottom: 3px solid #fafafa;margin-bottom: 30px;}
+
+#listado .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e0e;
+    border-bottom: 2px solid #565656;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 20px;
+
+}
+
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+  }
+  
+  @keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+  }

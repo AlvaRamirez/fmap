@@ -32,8 +32,8 @@ const getHeladerias = async (id = '') => {
         const elementByID = result.find(el => id == el._id)
         return elementByID
     }
-
 }
+
 
 const dataRow = props => {
 
@@ -46,8 +46,8 @@ const dataRow = props => {
         <h2 class="titu">${name}</h2>
     </div>
     <div class="btns_wrapper">
-        <a href="#" data-id="${_id}" class="btn verde handleEdit">Editar</a>
-        <a href="#" data-id="${_id}" class="btn rojo handleDelete">Eliminar</a>
+        <a href="#" data-id="${_id}" class="botd handleEdit"> <img src="../assets/img/edit.png"></a>
+        <a href="#" data-id="${_id}" class="botd handleDelete"><img src="../assets/img/delete.png"></a>
     </div>
 </div>
 
@@ -112,8 +112,8 @@ document.addEventListener('click', async function () {
 }, false)
 
 //CREATE
-const createHeladeria = async (data) => {
-    const result = await api.createHeladeria(data);
+const createHeladerias = async (data) => {
+    const result = await api.createHeladerias(data);
     console.log('Created',result)
     getHeladerias();
 }
