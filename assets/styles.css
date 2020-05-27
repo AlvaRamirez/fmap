@@ -28,6 +28,24 @@ p{
     font-weight: bold;
 }
 
+#load{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    padding: 40px;
+    font-family: monospace;
+
+
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+  
 
 .input {
     border-radius: 10px;
