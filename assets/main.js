@@ -75,7 +75,8 @@ const fetchMarkers = async (map) => {
 
     try {
     
-    const response = await fetch('assets/markers.json');
+   // const response = await fetch('assets/markers.json');
+    const response = await fetch('https://bmap.now.sh/heladerias');
     
     const json = await response.json();
     
@@ -124,7 +125,7 @@ const fetchMarkers = async (map) => {
         }
         const markerItem = new google.maps.Marker(
             {
-                position: { lat: lat, lng: lng },
+                position: { lat: parseFloat(lat), lng: parseFloat(lng) },
                 icon: icons[type],
                 map: map,
                 customInfo: type
