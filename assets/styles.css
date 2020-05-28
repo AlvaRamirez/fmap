@@ -1,4 +1,4 @@
-body{padding: 0; margin:0;}
+body{padding: 10px; margin:0;}
 
 #map{width: 100%;height: 100vh;}
 
@@ -13,7 +13,19 @@ p{
 }
 
 #form_main{margin-bottom: 30px;
-    text-align: center;}
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background-color: black;
+    transition: 0.3s;
+    text-align: center;
+
+    border-radius: 20px;
+
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+}
 
 .form_submit{    padding: 10px 30px;
     margin: 20px;
@@ -51,7 +63,14 @@ p{
 }
 
 .input:active{
-    border: 0.1px solid #2366d1;
+    border: 5px solid #2366d1;
+    transition: 0.3s all;
+}
+
+.input:focus{
+    border-color:3px solid #3273dc ;
+    box-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
+    transition: 0.3s all;
 }
 
 
@@ -292,18 +311,18 @@ h3 {
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: gray !important;
+    color: rgb(184, 184, 184) !important;
     opacity: 1; /* Firefox */
     font-style: italic;
     font-size: 15px;
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: gray !important;
+    color: rgb(184, 184, 184) !important;
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-    color: gray !important;
+    color: rgb(184, 184, 184) !important;
   }
   
   .titu {
@@ -315,8 +334,36 @@ h3 {
     font-family: 'Raleway', sans-serif !important;
 }
 
+
+/*opacity: 0;
+transition: 0.3s all;
+padding: 0px;
+margin: 0 auto;
+margin-bottom: -80px;*/
+
+#form_main{
+    transition: 0.3s all;
+    padding: 0px;
+    margin: 0 auto;
+    margin-bottom: -130px;opacity: 0; transition: 0.5s all;}
+
+#form_main.active{ margin-bottom: 30px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background-color: black;
+    transition: 0.3s;
+    text-align: center;
+
+    border-radius: 20px;
+
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); width: 100%; transition: 0.5s all; opacity: 100; }
+
 .btn {
     padding: 10px 20px;
+    z-index: 100;
     margin: 5px;
     border-radius: 5px;
     color: #fff;
@@ -326,19 +373,6 @@ h3 {
     -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
-}
-
-#form_wrapper{background-color: black;
-    padding: 20px;
-    padding-top: 50px;
-    padding-bottom: 10px;
-    border-radius: 20px;
-
-    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
-
-
 }
 
 .botd{padding: 15px;}
@@ -373,8 +407,13 @@ a:hover{
 }
 
 #wrapper{padding: 50px 0 40px;}
-#btn_agregar_wrapper{display: flex; justify-content: flex-end; margin-bottom: 40px;}
+
+#btn_agregar_wrapper{display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    margin-top: 40px;}
 .inner{max-width: 1200px; margin: auto;}
+
 
 #listado .item {
     display: flex;
@@ -385,7 +424,13 @@ a:hover{
     margin-bottom: 30px;
     border-radius: 15px;
     padding: 20px;
+    transition: 0.3s all;
 
+}
+
+#listado .item:hover{
+    background-color: #171616;
+    transition: 0.3s all;
 }
 
 @keyframes zoomIn {

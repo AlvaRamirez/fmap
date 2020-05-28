@@ -1,5 +1,5 @@
-const baseUrl = 'http://localhost:3000/';
-//const baseUrl = 'https://fmap.now.sh/';
+//const baseUrl = 'http://localhost:3000/';
+const baseUrl = 'https://bmap.now.sh/';
 const apiHeaders= {
 
     'Content-Type': 'application/json',
@@ -42,8 +42,8 @@ const api = {
 
 const api = {
     //Funciones CRUD
-    //CREATE (To be continued...)
-    createHeladerias: async formData => {
+    //CREATE 
+    createHeladeria: async formData => {
         const dataResponse = await fetch(baseUrl + 'heladerias', fetchParams('POST', formData));
         const dataInfo = await dataResponse.json();
         return dataInfo;
