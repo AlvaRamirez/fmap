@@ -8,8 +8,8 @@ const $form_field_type = document.querySelector('#form_field_type');
 const $form_field_id = document.querySelector('#form_field_id'); //Se agregó el campo ID como input hidden
 const $form_main = document.querySelector('#form_main');
 const $add_button = document.querySelector('.handleAdd');
-
-
+const $form_submite = document.querySelector('#editar');
+const $form_submita = document.querySelector('#agregar');
 
 const getHeladerias = async (id = '') => {
     const result = await api.getHeladerias();
@@ -80,7 +80,10 @@ const handleClickEdit = async (event) => {
     const id = event.target.dataset.id;
     const reg = await getHeladerias(id);
     $form_main.classList.add("active");
+    $form_submite.classList.add("active");
+    
    completeForm(reg)
+   $form_submita.classList.add("remove");
 }
 
 const completeForm = (reg) => {
@@ -125,7 +128,10 @@ const handleClickAdd = (event) => {
     $form_field_id.value = '';
     $form_main.reset();
     $form_main.classList.add("active");
+    $form_submita.classList.add("active");
+    
     $form_field_lat.focus();
+    $form_submite.classList.add("remove");
 }
 
 $add_button.addEventListener('click', handleClickAdd)
