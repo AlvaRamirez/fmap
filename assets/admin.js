@@ -37,7 +37,7 @@ const getHeladerias = async (id = '') => {
 
 const dataRow = props => {
 
-    const { _id, lat, lng, name, description, type, web, img } = props
+    const { _id, lat, lng, name, description, type, web, img } = props;
 
     return `
     
