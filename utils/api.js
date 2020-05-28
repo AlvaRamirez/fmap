@@ -56,13 +56,13 @@ const api = {
     },
     //UPDATE
     updateHeladeria: async (formData,id) => {
-        const dataResponse = await fetch(baseUrl + 'heladeria/' + id, fetchParams('PUT', formData));
+        const dataResponse = await fetch(baseUrl + 'heladerias/' + id, fetchParams('PUT', formData));
         const dataInfo = await dataResponse.json();
         return dataInfo;
     },
     //DELETE
     deleteHeladeria: async id => {
-        const dataResponse = await fetch(baseUrl + 'heladeria/' + id, fetchParams('DELETE'));
+        const dataResponse = await fetch(baseUrl + 'heladerias/' + id, fetchParams('DELETE'));
         const dataInfo = await dataResponse.json();
         return dataInfo;
     },
