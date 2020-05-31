@@ -10,6 +10,10 @@ const $form_main = document.querySelector('#form_main');
 const $add_button = document.querySelector('.handleAdd');
 const $form_submite = document.querySelector('#editar');
 const $form_submita = document.querySelector('#agregar');
+const $aviso= document.querySelector('#aviso');
+const $borrar= document.querySelector('#borrar');
+const $si= document.querySelector('#si');
+const $no= document.querySelector('#no');
 
 const getHeladerias = async (id = '') => {
     const result = await api.getHeladerias();
@@ -57,8 +61,7 @@ const dataRow = props => {
 getHeladerias();
 
 
-const deleteHeladeria = async (id) => {
-
+const deleteHeladeria = async (id) => { 
     const result = await api.deleteHeladeria(id);
     console.log('Deleted', result)
     getHeladerias();
@@ -68,7 +71,11 @@ const deleteHeladeria = async (id) => {
 const handleClickDelete = async () => {
     const id = event.target.dataset.id;
     deleteHeladeria(id);
+    $borrar.classList.add("active");
 }
+
+
+
 
 //UPDATE
 const updateHeladeria = async (data,id) => {
@@ -83,7 +90,8 @@ const handleClickEdit = async (event) => {
     $form_submite.classList.add("active");
     
    completeForm(reg)
-   $form_submita.classList.add("remove");
+   $form_submita.classList.remove("active");
+   
 }
 
 const completeForm = (reg) => {
@@ -121,6 +129,12 @@ const createHeladeria = async (data) => {
     const result = await api.createHeladeria(data);
     console.log('Created',result)
     getHeladerias();
+    $aviso.classList.add("active");
+    setTimeout(function(){
+         
+        $aviso.classList.remove("active");
+        
+        }, 2500);
 }
 
 const handleClickAdd = (event) => {
@@ -131,7 +145,7 @@ const handleClickAdd = (event) => {
     $form_submita.classList.add("active");
     
     $form_field_lat.focus();
-    $form_submite.classList.add("remove");
+    $form_submite.classList.remove("active");
 }
 
 $add_button.addEventListener('click', handleClickAdd)
@@ -147,19 +161,29 @@ $form_main.addEventListener('submit', (event) => {
         "name": $form_field_name.value,
         "description": $form_field_description.value,
         "type": $form_field_type.value
+
     }
 
     $form_main.classList.remove("active");
     if (id === '') {
         createHeladeria(formData)
+      
     } else {
 
     updateHeladeria(formData,id);
 
     }
-    
 
     //Reseteo el form
     $form_field_id.value = '';
     $form_main.reset();
-})
+  
+    $aviso.classList.add("active");
+    setTimeout(function(){
+         
+        $aviso.classList.remove("active");
+        
+        }, 2500);
+
+
+}) 
