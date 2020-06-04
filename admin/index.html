@@ -2,24 +2,21 @@
 <html lang="es">
 
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Heladerias de CABA gordi</title>
-        <link rel="shortcut icon" type="image/png" href="../assets/img/fav.ico">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-        <link href="../assets/animate.css" type="text/css" rel="stylesheet">
-        <link href="../assets/styles.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-      />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Heladerias de CABA gordi</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/img/fav.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link href="../assets/animate.css" type="text/css" rel="stylesheet">
+    <link href="../assets/styles.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
-    </head>
+</head>
 
-    <body>
+<body>
 
     <div id="wrapper">
         <div class="inner">
@@ -27,27 +24,28 @@
             <div id="form_wrapper">
                 <form id="form_main">
                     <input class="input" id="form_field_lat" type="text" name="lat" placeholder="Latitud">
-                    <input class="input" id="form_field_lng" type="text" name="lng" placeholder="Longitud"> 
+                    <input class="input" id="form_field_lng" type="text" name="lng" placeholder="Longitud">
                     <input class="input" id="form_field_name" type="text" name="name" placeholder="Nombre">
-                    <input class="input" id="form_field_description" type="text" name="description" placeholder="Description">
+                    <input class="input" id="form_field_description" type="text" name="description"
+                        placeholder="Description">
                     <input class="input" id="form_field_type" type="text" name="type" placeholder="Tipo">
                     <input class="input" id="form_field_id" type="hidden" name="id" placeholder="ID">
-                  <br>  <button class="form_submite" id="editar" class="btn azul" type="submit">Editar</button>
-                  <br>  <button class="form_submita" id="agregar" class="btn azul" type="submit">Agregar</button>
+                    <br> <button class="form_submite" id="editar" class="btn azul" type="submit">Editar</button>
+                    <br> <button class="form_submita" id="agregar" class="btn azul" type="submit">Agregar</button>
                 </form>
 
             </div>
             <div id="btn_agregar_wrapper">
-                
+
                 <a href="#" class="btn azul handleAdd">Agregar</a>
             </div>
 
-            
+
             <div class="slideInDown" id="listado">
                 <p id="load" class="zoomIn">Cargando</p>
             </div>
         </div>
-      
+
         <div id="aviso">
             <img src="../assets/img/checked.png">
             <br>
@@ -55,7 +53,7 @@
         </div>
 
         <div id="borrar">
-        
+
             <p>¿Seguro que queres borrarla?</p>
             <button id="si" class="bo">Si</button>
             <button id="no" class="bo">No</button>

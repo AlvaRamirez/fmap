@@ -10,10 +10,10 @@ const $form_main = document.querySelector('#form_main');
 const $add_button = document.querySelector('.handleAdd');
 const $form_submite = document.querySelector('#editar');
 const $form_submita = document.querySelector('#agregar');
-const $aviso= document.querySelector('#aviso');
-const $borrar= document.querySelector('#borrar');
-const $si= document.querySelector('#si');
-const $no= document.querySelector('#no');
+const $aviso = document.querySelector('#aviso');
+const $borrar = document.querySelector('#borrar');
+const $si = document.querySelector('#si');
+const $no = document.querySelector('#no');
 
 const getHeladerias = async (id = '') => {
     const result = await api.getHeladerias();
@@ -32,7 +32,7 @@ const getHeladerias = async (id = '') => {
             element.addEventListener('click', handleClickEdit)
         });
     } else {
-        console.log("id",id);
+        console.log("id", id);
         const elementByID = result.find(el => id == el._id)
         return elementByID
     }
@@ -61,7 +61,7 @@ const dataRow = props => {
 getHeladerias();
 
 
-const deleteHeladeria = async (id) => { 
+const deleteHeladeria = async (id) => {
     const result = await api.deleteHeladeria(id);
     console.log('Deleted', result)
     getHeladerias();
@@ -69,34 +69,44 @@ const deleteHeladeria = async (id) => {
 }
 
 const handleClickDelete = async () => {
-    const id = event.target.dataset.id;
-    deleteHeladeria(id);
     $borrar.classList.add("active");
+    const $si = document.querySelector('#si');
+    const $no = document.querySelector('#no');
+    if ($si) {
+        const id = event.target.dataset.id;
+        deleteHeladeria(id);
+    } else if ($no) {
+        $borrar.classList.remove("active");
+    }
+
+
 }
+
 
 
 
 
 //UPDATE
-const updateHeladeria = async (data,id) => {
-    const result = await api.updateHeladeria(data,id);
-    console.log('Updated', result)
+const updateHeladeria = async (data, id) => {
+    const result = await api.updateHeladeria(data, id);
+    console.log('Updated', result);
     getHeladerias();
 }
+
 const handleClickEdit = async (event) => {
     const id = event.target.dataset.id;
     const reg = await getHeladerias(id);
     $form_main.classList.add("active");
     $form_submite.classList.add("active");
-    
-   completeForm(reg)
-   $form_submita.classList.remove("active");
-   
+
+    completeForm(reg)
+    $form_submita.classList.remove("active");
+
 }
 
 const completeForm = (reg) => {
     const { _id, lat, lng, name, description, type } = reg;
-    
+
     $form_field_lat.value = lat;
     $form_field_lng.value = lng;
     $form_field_name.value = name;
@@ -127,14 +137,14 @@ document.addEventListener('click', async function () {
 //CREATE
 const createHeladeria = async (data) => {
     const result = await api.createHeladeria(data);
-    console.log('Created',result)
+    console.log('Created', result)
     getHeladerias();
     $aviso.classList.add("active");
-    setTimeout(function(){
-         
+    setTimeout(function () {
+
         $aviso.classList.remove("active");
-        
-        }, 2500);
+
+    }, 2500);
 }
 
 const handleClickAdd = (event) => {
@@ -143,7 +153,7 @@ const handleClickAdd = (event) => {
     $form_main.reset();
     $form_main.classList.add("active");
     $form_submita.classList.add("active");
-    
+
     $form_field_lat.focus();
     $form_submite.classList.remove("active");
 }
@@ -167,23 +177,23 @@ $form_main.addEventListener('submit', (event) => {
     $form_main.classList.remove("active");
     if (id === '') {
         createHeladeria(formData)
-      
+
     } else {
 
-    updateHeladeria(formData,id);
+        updateHeladeria(formData, id);
 
     }
 
     //Reseteo el form
     $form_field_id.value = '';
     $form_main.reset();
-  
+
     $aviso.classList.add("active");
-    setTimeout(function(){
-         
+    setTimeout(function () {
+
         $aviso.classList.remove("active");
-        
-        }, 2500);
+
+    }, 2500);
 
 
 }) 
