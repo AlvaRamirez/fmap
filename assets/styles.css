@@ -398,7 +398,7 @@ box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); width: 100%; transition: 0.5s all
     padding: 0px;
     margin: 0 auto;
     margin-bottom: -130px;opacity: 0; transition: 0.5s all;
-    
+    display: none;
 }
 
 #borrar.active{
@@ -412,7 +412,7 @@ box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); width: 100%; transition: 0.5s all
         top: 40%;
         left: 35%;
         opacity: 100;
-        
+        display: block;
     -webkit-box-shadow: 0px 0px 11px 0px rgba(209,147,23,1);
     -moz-box-shadow: 0px 0px 11px 0px rgba(209,147,23,1);
     box-shadow: 0px 0px 11px 0px rgba(209,147,23)
@@ -460,11 +460,12 @@ box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); width: 100%; transition: 0.5s all
     -moz-box-shadow: 0px 0px 11px 0px rgba(209,147,23,1);
     box-shadow: 0px 0px 11px 0px rgba(209,147,23,1);
     opacity: 0;
+    display: none;
 }
 
   
 #aviso.active{
-    
+    display: block;
     background-color: black;
     transition: 0.5s all;
     width: 30%;

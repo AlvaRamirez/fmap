@@ -16,29 +16,6 @@ const fetchParams = (method, data = '') => {
         ...body
     }
 }
-/*
-const api = {
-
-    //GET
-    getHeladerias: async () => {
-        const dataResponse = await fetch(baseUrl + 'heladerias', fetchParams('GET'));
-        const dataInfo = await dataResponse.json();
-        return dataInfo;
-    },
-
-    //DELETE
-
-    deleteHeladeria: async id => {
-        const dataResponse = await fetch(baseUrl + 'heladerias/' + id, fetchParams('DELETE'));
-        const dataInfo = await dataResponse.json();
-        return dataInfo;
-    }
-
-    //PUT
-
-    //POST
-
-}*/
 
 const api = {
     //Funciones CRUD

@@ -72,6 +72,7 @@ const handleClickDelete = async () => {
     $borrar.classList.add("active");
     const $si = document.querySelector('#si');
     const $no = document.querySelector('#no');
+
     if ($si) {
         const id = event.target.dataset.id;
         deleteHeladeria(id);
@@ -81,7 +82,6 @@ const handleClickDelete = async () => {
 
 
 }
-
 
 
 
