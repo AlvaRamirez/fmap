@@ -56,11 +56,8 @@ window.initMap = () =>{
     })
 
     //Agrego los markers filtrados según filtro (markerType)
-    const addMarkerFiltered = (markerType) => {
-        console.log('clicked beer');
-      
+    const addMarkerFiltered = (markerType) => {      
         markersAll.forEach((marker) => {
-            //console.log(marker)
             marker.setMap(null); //Quita todos los markers del mapa
         })
         const markerFiltered = markersAll.filter((markerItem) => markerItem.customInfo === markerType)
@@ -82,7 +79,6 @@ const fetchMarkers = async (map) => {
     
     json.forEach(marker => {
         addMarker(map,marker);
-    console.log(marker)
 });
     //var marker = new google.maps.Marker({position:{ lat:marker.lat,lng:marker.lng}, map: map });
     
@@ -98,7 +94,6 @@ const fetchMarkers = async (map) => {
     }
 
     const addMarker = (map, marker) => {
-        console.log(marker);
         const {lat,lng,name, description,type, web, img} = marker;
         const conetentString= `
       

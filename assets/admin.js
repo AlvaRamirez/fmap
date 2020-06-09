@@ -25,14 +25,19 @@ const getHeladerias = async (id = '') => {
 
         const $btnsDelete = document.querySelectorAll('.handleDelete');
         $btnsDelete.forEach(element => {
-            element.addEventListener('click', handleClickDelete)
+            
+            element.addEventListener('click', ()=>{
+                $borrar.classList.add("active");
+                const id = event.target.dataset.id;
+                $si.dataset.id=id
+            })
         });
         const $btnsEdit = document.querySelectorAll('.handleEdit');
         $btnsEdit.forEach(element => {
             element.addEventListener('click', handleClickEdit)
         });
     } else {
-        console.log("id", id);
+        
         const elementByID = result.find(el => id == el._id)
         return elementByID
     }
@@ -63,33 +68,39 @@ getHeladerias();
 
 const deleteHeladeria = async (id) => {
     const result = await api.deleteHeladeria(id);
-    console.log('Deleted', result)
+   
     getHeladerias();
 
 }
 
-const handleClickDelete = async () => {
-    $borrar.classList.add("active");
-    const $si = document.querySelector('#si');
-    const $no = document.querySelector('#no');
 
-    if ($si) {
-        const id = event.target.dataset.id;
-        deleteHeladeria(id);
-    } else if ($no) {
-        $borrar.classList.remove("active");
-    }
+$si.addEventListener("click", ()=>{
+    const id = event.target.dataset.id;
+    deleteHeladeria(id);
+    $borrar.classList.remove("active");  
+    setTimeout(function () {
+
+        $aviso.classList.add("active");
+        setTimeout (function(){
+            $aviso.classList.remove("active");
+        }, 2500);
+
+    }, 1500);
+
+    
+  
+})
 
 
-}
-
-
+$no.addEventListener("click", ()=>{
+    $borrar.classList.remove("active");
+})
 
 
 //UPDATE
 const updateHeladeria = async (data, id) => {
     const result = await api.updateHeladeria(data, id);
-    console.log('Updated', result);
+    
     getHeladerias();
 }
 
@@ -119,16 +130,13 @@ const completeForm = (reg) => {
 document.addEventListener('click', async function () {
     if (event.target.matches('.handleDelete')) {
         const id = event.target.dataset.id;
-        console.log('click en un boton delete', id);
         deleteHeladeria(id);
 
     }
 
     if (event.target.matches('handleEdit')) {
         const id = event.target.dataset.id;
-        console.log('click en un boton edit', id);
-        const reg = await getHeladerias(id);
-        console.log(reg)
+        const reg = await getHeladerias(id); 
     }
 
 
@@ -137,8 +145,9 @@ document.addEventListener('click', async function () {
 //CREATE
 const createHeladeria = async (data) => {
     const result = await api.createHeladeria(data);
-    console.log('Created', result)
+    
     getHeladerias();
+
     $aviso.classList.add("active");
     setTimeout(function () {
 
